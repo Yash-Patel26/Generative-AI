@@ -1,6 +1,6 @@
 # Using Generative AI Responsibly
 
-[![Using Generative AI Responsibly](./images/03-lesson-banner.png?wt.mc_id=studentamb_409460-koreyst)](https://aka.ms/gen-ai-lesson3-gh?wt.mc_id=studentamb_409460-koreyst)
+[![Using Generative AI Responsibly](./images/03-lesson-banner.png?wt.mc_id=studentamb_409460)](https://aka.ms/gen-ai-lesson3-gh?wt.mc_id=studentamb_409460)
 
 > _Click the image above to view video of this lesson_
 
@@ -44,9 +44,9 @@ Let's take for example we build a feature for our startup that allows students t
 
 The model produces a response such as the one below:
 
-![Prompt saying "Who was the sole survivor of the Titanic"](../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp?wt.mc_id=studentamb_409460-koreyst)
+![Prompt saying "Who was the sole survivor of the Titanic"](../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp?wt.mc_id=studentamb_409460)
 
-> _(Source: [Flying bisons](https://flyingbisons.com?wt.mc_id=studentamb_409460-koreyst))_
+> _(Source: [Flying bisons](https://flyingbisons.com?wt.mc_id=studentamb_409460))_
 
 This is a very confident and thorough answer. Unfortunately, it is incorrect. Even with a minimal amount of research, one would discover there was more than one survivor of the Titanic disaster. For a student who is just starting to research this topic, this answer can be persuasive enough to not be questioned and treated as fact. The consequences of this can lead to the AI system being unreliable and negatively impact the reputation of our startup.
 
@@ -76,7 +76,7 @@ These types of outputs are not only destructive to building positive product exp
 
 Now that we have identified the importance of Responsible Generative AI, let's look at 4 steps we can take to build our AI solutions responsibly:
 
-![Mitigate Cycle](./images/mitigate-cycle.png?wt.mc_id=studentamb_409460-koreyst)
+![Mitigate Cycle](./images/mitigate-cycle.png?wt.mc_id=studentamb_409460)
 
 ### Measure Potential Harms
 
@@ -88,7 +88,7 @@ Since our startup is building an education product, it would be good to prepare 
 
 It is now time to find ways where we can prevent or limit the potential harm caused by the model and its responses. We can look at this in 4 different layers:
 
-![Mitigation Layers](./images/mitigation-layers.png?wt.mc_id=studentamb_409460-koreyst)
+![Mitigation Layers](./images/mitigation-layers.png?wt.mc_id=studentamb_409460)
 
 - **Model**. Choosing the right model for the right use case. Larger and more complex models like GPT-4 can cause more of a risk of harmful content when applied to smaller and more specific use cases. Using your training data to fine-tune also reduces the risk of harmful content.
 
@@ -96,11 +96,11 @@ It is now time to find ways where we can prevent or limit the potential harm cau
 
 - **Metaprompt**. Metaprompts and grounding are ways we can direct or limit the model based on certain behaviors and information. This could be using system inputs to define certain limits of the model. In addition, providing outputs that are more relevant to the scope or domain of the system.
 
-It can also be using techniques like Retrieval Augmented Generation (RAG) to have the model only pull information from a selection of trusted sources. There is a lesson later in this course for [building search applications](../08-building-search-applications/README.md?wt.mc_id=studentamb_409460-koreyst)
+It can also be using techniques like Retrieval Augmented Generation (RAG) to have the model only pull information from a selection of trusted sources. There is a lesson later in this course for [building search applications](../08-building-search-applications/README.md?wt.mc_id=studentamb_409460)
 
 - **User Experience**. The final layer is where the user interacts directly with the model through our application’s interface in some way. In this way we can design the UI/UX to limit the user on the types of inputs they can send to the model as well as text or images displayed to the user. When deploying the AI application, we also must be transparent about what our Generative AI application can and can’t do.
 
-We have an entire lesson dedicated to [Designing UX for AI Applications](../12-designing-ux-for-ai-applications/README.md?wt.mc_id=studentamb_409460-koreyst)
+We have an entire lesson dedicated to [Designing UX for AI Applications](../12-designing-ux-for-ai-applications/README.md?wt.mc_id=studentamb_409460)
 
 - **Evaluate model**. Working with LLMs can be challenging because we don’t always have control over the data the model was trained on. Regardless, we should always evaluate the model’s performance and outputs. It’s still important to measure the model’s accuracy, similarity, groundedness, and relevance of the output. This helps provide transparency and trust to stakeholders and users.
 
@@ -110,7 +110,7 @@ Building an operational practice around your AI applications is the final stage.
 
 ## Tools
 
-While the work of developing Responsible AI solutions may seem like a lot, it is work well worth the effort. As the area of Generative AI grows, more tooling to help developers efficiently integrate responsibility into their workflows will mature. For example, the [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?wt.mc_id=studentamb_409460-koreyst) can help detect harmful content and images via an API request.
+While the work of developing Responsible AI solutions may seem like a lot, it is work well worth the effort. As the area of Generative AI grows, more tooling to help developers efficiently integrate responsibility into their workflows will mature. For example, the [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?wt.mc_id=studentamb_409460) can help detect harmful content and images via an API request.
 
 ## Knowledge check
 
@@ -124,10 +124,10 @@ A: 2 and 3 are correct. Responsible AI helps you consider how to mitigate harmfu
 
 ## 🚀 Challenge
 
-Read up on [Azure AI Content Saftey](https://learn.microsoft.com/azure/ai-services/content-safety/overview?wt.mc_id=studentamb_409460-koreyst) and see what you can adopt for your usage.
+Read up on [Azure AI Content Saftey](https://learn.microsoft.com/azure/ai-services/content-safety/overview?wt.mc_id=studentamb_409460) and see what you can adopt for your usage.
 
 ## Great Work, Continue Your Learning
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?wt.mc_id=studentamb_409460-koreyst) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?wt.mc_id=studentamb_409460) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 4 where we will look at [Prompt Engineering Fundamentals](../04-prompt-engineering-fundamentals/README.md?wt.mc_id=studentamb_409460-koreyst)!
+Head over to Lesson 4 where we will look at [Prompt Engineering Fundamentals](../04-prompt-engineering-fundamentals/README.md?wt.mc_id=studentamb_409460)!
