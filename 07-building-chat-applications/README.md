@@ -179,6 +179,6 @@ See [assignment](./python?wt.mc_id=studentamb_409460-koreyst) it will take you t
 
 ## Great Work! Continue the Journey
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?wt.mc_id=studentamb_409460-koreyst) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://learn.microsoft.com/en-us/collections/zpy7c8zmq6ky0z?wt.mc_id=studentamb_409460) to continue leveling up your Generative AI knowledge!
 
 Head over to Lesson 8 to see how you can start [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
