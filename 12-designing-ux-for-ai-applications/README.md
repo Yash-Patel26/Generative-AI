@@ -115,6 +115,6 @@ Take any AI apps you've built so far, consider implementing the below steps in y
 
 ## Continue Your Learning!
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?wt.mc_idstudentamb_409460) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://learn.microsoft.com/en-us/collections/zpy7c8zmq6ky0z?wt.mc_id=studentamb_409460) to continue leveling up your Generative AI knowledge!
 
 Head over to Lesson 13 where we will look at how to [securing AI applications](../13-securing-ai-applications/README.md?wt.mc_idstudentamb_409460)!
