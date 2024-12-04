@@ -1,6 +1,6 @@
 # Integrating with function calling
 
-[![Integrating with function calling](./images/11-lesson-banner.png?wt.mc_id=studentamb_409460-koreyst)](https://aka.ms/gen-ai-lesson11-gh?wt.mc_id=studentamb_409460-koreyst)
+[![Integrating with function calling](./images/11-lesson-banner.png?wt.mc_id=studentamb_409460)](https://aka.ms/gen-ai-lesson11-gh?wt.mc_id=studentamb_409460)
 
 You've learned a fair bit so far in the previous lessons. However, we can improve further. Some things we can address are how we can get a more consistent response format to make it easier to work with the response downstream. Also, we might want to add data from other sources to further enrich our application.
 
@@ -45,7 +45,7 @@ Function Calling is a feature of the Azure OpenAI Service to overcome to the fol
 
 ## Illustrating the problem through a scenario
 
-> We recommend you to use the [included notebook](./python/aoai-assignment.ipynb?wt.mc_id=studentamb_409460-koreyst) if you want to run the below scenario. You can also just read along as we're trying to illustrate a problem where functions can help to address the problem.
+> We recommend you to use the [included notebook](./python/aoai-assignment.ipynb?wt.mc_id=studentamb_409460) if you want to run the below scenario. You can also just read along as we're trying to illustrate a problem where functions can help to address the problem.
 
 Let's look at the example that illustrates the response format problem:
 
@@ -170,7 +170,7 @@ Now we can send both requests to the LLM and examine the response we receive by 
 
 So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
 
-![function flow](./images/Function-Flow.png?wt.mc_id=studentamb_409460-koreyst)
+![function flow](./images/Function-Flow.png?wt.mc_id=studentamb_409460)
 
 We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
 
@@ -192,7 +192,7 @@ The process of creating a function call includes 3 main steps:
 2. **Reading** the model's response to perform an action ie execute a function or API Call.
 3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
 
-![LLM Flow](./images/LLM-Flow.png?wt.mc_id=studentamb_409460-koreyst)
+![LLM Flow](./images/LLM-Flow.png?wt.mc_id=studentamb_409460)
 
 ### Step 1 - creating messages
 
@@ -449,10 +449,10 @@ To continue your learning of Azure OpenAI Function Calling you can build:
 - Create another function call that takes more information from the learner like their native language
 - Create error handling when the function call and/or API call does not return any suitable courses
 
-Hint: Follow the [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?wt.mc_id=studentamb_409460-koreyst) page to see how and where this data is available.
+Hint: Follow the [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?wt.mc_id=studentamb_409460) page to see how and where this data is available.
 
 ## Great Work! Continue the Journey
 
 After completing this lesson, check out our [Generative AI Learning collection](https://learn.microsoft.com/en-us/collections/zpy7c8zmq6ky0z?wt.mc_id=studentamb_409460) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 12 where we will look at how to [design UX for AI applications](../12-designing-ux-for-ai-applications/README.md?wt.mc_id=studentamb_409460-koreyst)!
+Head over to Lesson 12 where we will look at how to [design UX for AI applications](../12-designing-ux-for-ai-applications/README.md?wt.mc_id=studentamb_409460)!
