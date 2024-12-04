@@ -1,6 +1,6 @@
 # Introduction to Generative AI and Large Language Models
 
-[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png?wt.mc_id=studentamb_409460-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?wt.mc_id=studentamb_409460-koreyst)
+[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png?wt.mc_id=studentamb_409460)](https://aka.ms/gen-ai-lesson-1-gh?wt.mc_id=studentamb_409460)
 
 _(Click the image above to view video of this lesson)_
 
@@ -34,13 +34,13 @@ Our startup team is aware we’ll not be able to achieve this goal without lever
 
 Generative AI is expected to revolutionize the way we learn and teach today, with students having at their disposal virtual teachers 24 hours a day who provide vast amounts of information and examples, and teachers able to leverage innovative tools to assess their students and give feedback.
 
-![Five young students looking at a monitor - image by DALLE2](./images/students-by-DALLE2.png?wt.mc_id=studentamb_409460-koreyst)
+![Five young students looking at a monitor - image by DALLE2](./images/students-by-DALLE2.png?wt.mc_id=studentamb_409460)
 
 To start, let’s define some basic concepts and terminology we’ll be using throughout the curriculum.
 
 ## How did we get Generative AI?
 
-Despite the extraordinary _hype_ created lately by the announcement of generative AI models, this technology is decades in the making, with the first research efforts dating back to 60s. We're now at a point with AI having human cognitive capabilities, like conversation as shown by for example [OpenAI ChatGPT](https://openai.com/chatgpt) or [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?wt.mc_id=studentamb_409460-koreyst), which also uses a GPT model for the web search Bing conversations.
+Despite the extraordinary _hype_ created lately by the announcement of generative AI models, this technology is decades in the making, with the first research efforts dating back to 60s. We're now at a point with AI having human cognitive capabilities, like conversation as shown by for example [OpenAI ChatGPT](https://openai.com/chatgpt) or [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?wt.mc_id=studentamb_409460), which also uses a GPT model for the web search Bing conversations.
 
 Backing up a bit, the very first prototypes of AI consisted of typewritten chatbots, relying on a knowledge base extracted from a group of experts and represented into a computer. The answers in the knowledge base were triggered by keywords appearing in the input text.
 However, it soon became clear that such approach, using typewritten chatbots, did not scale well.
@@ -61,7 +61,7 @@ This is the technology that powered the virtual assistants born in the first dec
 
 So that’s how we came to Generative AI today, which can be seen as a subset of deep learning.
 
-![AI, ML, DL and Generative AI](./images/AI-diagram.png?wt.mc_id=studentamb_409460-koreyst)
+![AI, ML, DL and Generative AI](./images/AI-diagram.png?wt.mc_id=studentamb_409460)
 
 After decades of research in the AI field, a new model architecture – called _Transformer_ – overcame the limits of RNNs, being able to get much longer sequences of text as input. Transformers are based on the attention mechanism, enabling the model to give different weights to the inputs it receives, ‘paying more attention’ where the most relevant information is concentrated, regardless of their order in the text sequence.
 
@@ -73,7 +73,7 @@ In the next chapter we are going to explore different types of Generative AI mod
 
 - **Tokenizer, text to numbers**: Large Language Models receive a text as input and generate a text as output. However, being statistical models, they work much better with numbers than text sequences. That’s why every input to the model is processed by a tokenizer, before being used by the core model. A token is a chunk of text – consisting of a variable number of characters, so the tokenizer's main task is splitting the input into an array of tokens. Then, each token is mapped with a token index, which is the integer encoding of the original text chunk.
 
-![Example of tokenization](./images/tokenizer-example.png?wt.mc_id=studentamb_409460-koreyst)
+![Example of tokenization](./images/tokenizer-example.png?wt.mc_id=studentamb_409460)
 
 - **Predicting output tokens**: Given n tokens as input (with max n varying from one model to another), the model is able to predict one token as output. This token is then incorporated into the input of the next iteration, in an expanding window pattern, enabling a better user experience of getting one (or multiple) sentence as an answer. This explains why, if you ever played with ChatGPT, you might have noticed that sometimes it looks like it stops in the middle of a sentence.
 
@@ -91,23 +91,23 @@ The input of a large language model is known as prompt, while the output is know
 
   1. Summarization of an article, book, product reviews and more, along with extraction of insights from unstructured data.
     
-    ![Example of summarization](./images/summarization-example.png?wt.mc_id=studentamb_409460-koreyst)
+    ![Example of summarization](./images/summarization-example.png?wt.mc_id=studentamb_409460)
   
   2. Creative ideation and design of an article, an essay, an assignment or more.
       
-     ![Example of creative writing](./images/creative-writing-example.png?wt.mc_id=studentamb_409460-koreyst)
+     ![Example of creative writing](./images/creative-writing-example.png?wt.mc_id=studentamb_409460)
 
 - A **question**, asked in the form of a conversation with an agent.
   
-  ![Example of conversation](./images/conversation-example.png?wt.mc_id=studentamb_409460-koreyst)
+  ![Example of conversation](./images/conversation-example.png?wt.mc_id=studentamb_409460)
 
 - A chunk of **text to complete**, which implicitly is an ask for writing assistance.
   
-  ![Example of text completion](./images/text-completion-example.png?wt.mc_id=studentamb_409460-koreyst)
+  ![Example of text completion](./images/text-completion-example.png?wt.mc_id=studentamb_409460)
 
 - A chunk of **code** together with the ask of explaining and documenting it, or a comment asking to generate a piece of code performing a specific task.
   
-  ![Coding example](./images/coding-example.png?wt.mc_id=studentamb_409460-koreyst)
+  ![Coding example](./images/coding-example.png?wt.mc_id=studentamb_409460)
 
 The examples above are quite simple and don’t want to be an exhaustive demonstration of Large Language Models capabilities. They just want to show the potential of using generative AI, in particular but not limited to educational context.
 
@@ -115,9 +115,9 @@ Also, the output of a generative AI model is not perfect and sometimes the creat
 
 ## Assignment
 
-Your assignment is to read up more on [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?wt.mc_id=studentamb_409460-koreyst) and try to identify an area where you would add generative AI today that doesn't have it. How would the impact be different from doing it the "old way", can you do something you couldn't before, or are you faster? Write a 300 word summary on what your dream AI startup would look like and include headers like "Problem", "How I would use AI", "Impact" and optionally a business plan.
+Your assignment is to read up more on [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?wt.mc_id=studentamb_409460) and try to identify an area where you would add generative AI today that doesn't have it. How would the impact be different from doing it the "old way", can you do something you couldn't before, or are you faster? Write a 300 word summary on what your dream AI startup would look like and include headers like "Problem", "How I would use AI", "Impact" and optionally a business plan.
 
-If you did this task, you might even be ready to apply to Microsoft's incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?wt.mc_id=studentamb_409460-koreyst) we offer credits for both Azure, OpenAI, mentoring and much more, check it out!
+If you did this task, you might even be ready to apply to Microsoft's incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?wt.mc_id=studentamb_409460) we offer credits for both Azure, OpenAI, mentoring and much more, check it out!
 
 ## Knowledge check
 
@@ -131,6 +131,6 @@ A: 3, an LLM is non-deterministic, the response vary, however, you can control i
 
 ## Great Work! Continue the Journey
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?wt.mc_id=studentamb_409460-koreyst) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?wt.mc_id=studentamb_409460) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 2 where we will look at how to [explore and compare different LLM types](../02-exploring-and-comparing-different-llms/README.md?wt.mc_id=studentamb_409460-koreyst)!
+Head over to Lesson 2 where we will look at how to [explore and compare different LLM types](../02-exploring-and-comparing-different-llms/README.md?wt.mc_id=studentamb_409460)!
