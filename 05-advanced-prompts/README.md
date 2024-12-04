@@ -1,6 +1,6 @@
 # Creating Advanced prompts
 
-[![Creating Advanced Prompts](./images/05-lesson-banner.png?wt.mc_id=studentamb_409460-koreyst)](https://aka.ms/gen-ai-lesson5-gh?wt.mc_id=studentamb_409460-koreyst?wt.mc_id=studentamb_409460-koreyst)
+[![Creating Advanced Prompts](./images/05-lesson-banner.png?wt.mc_id=studentamb_409460)](https://aka.ms/gen-ai-lesson5-gh?wt.mc_id=studentamb_409460-koreyst?wt.mc_id=studentamb_409460)
 
 Let's recap some learnings from the previous chapter:
 
@@ -613,7 +613,7 @@ Please attempt to solve the assignment by adding suitable prompts to the code.
 > [!TIP]
 > Phrase a prompt to ask it to improve, it's a good idea to limit how many improvements. You can also ask to improve it in a certain way, for example architecture, performance, security, etc.
 
-[Solution](./python/aoai-solution.py?wt.mc_id=studentamb_409460-koreyst)
+[Solution](./python/aoai-solution.py?wt.mc_id=studentamb_409460)
 
 ## Knowledge check
 
@@ -633,4 +633,4 @@ You just used the self-refine technique in the assignment. Take any program you 
 
 After completing this lesson, check out our [Generative AI Learning collection](https://learn.microsoft.com/en-us/collections/zpy7c8zmq6ky0z?wt.mc_id=studentamb_409460) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](../06-text-generation-apps/README.md?wt.mc_id=studentamb_409460-koreyst)
+Head over to Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](../06-text-generation-apps/README.md?wt.mc_id=studentamb_409460)
