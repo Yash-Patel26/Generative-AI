@@ -650,6 +650,6 @@ When working on the assignment, try to vary the temperature, try set it to 0, 0.
 
 ## Great Work! Continue Your Learning
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?wt.mc_id=studentamb_409460-koreyst) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://learn.microsoft.com/en-us/collections/zpy7c8zmq6ky0z?wt.mc_id=studentamb_409460) to continue leveling up your Generative AI knowledge!
 
 Head over to Lesson 7 where we will look at how to [build chat applications](../07-building-chat-applications/README.md?wt.mc_id=studentamb_409460-koreyst)!
