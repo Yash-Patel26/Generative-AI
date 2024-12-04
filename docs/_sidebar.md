@@ -1,0 +1,2 @@
+- Getting Started
+  - [Introduction to Generative AI](../01-introduction-to-genai/README.md?wt.mc_idstudentamb_409460)
