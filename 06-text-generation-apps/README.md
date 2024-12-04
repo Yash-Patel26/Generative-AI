@@ -1,6 +1,6 @@
 # Building Text Generation Applications
 
-[![Building Text Generation Applications](./images/06-lesson-banner.png?wt.mc_id=studentamb_409460-koreyst)](https://aka.ms/gen-ai-lesson6-gh?wt.mc_id=studentamb_409460-koreyst)
+[![Building Text Generation Applications](./images/06-lesson-banner.png?wt.mc_id=studentamb_409460)](https://aka.ms/gen-ai-lesson6-gh?wt.mc_id=studentamb_409460)
 
 > _(Click the image above to view video of this lesson)_
 
@@ -86,20 +86,20 @@ pip install openai
 
 You need to carry out the following steps:
 
-- Create an account on Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?wt.mc_id=studentamb_409460-koreyst).
-- Gain access to Azure OpenAI. Go to [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?wt.mc_id=studentamb_409460-koreyst) and request access.
+- Create an account on Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?wt.mc_id=studentamb_409460).
+- Gain access to Azure OpenAI. Go to [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?wt.mc_id=studentamb_409460) and request access.
 
   > [!NOTE]
   > At the time of writing, you need to apply for access to Azure OpenAI.
 
 - Install Python <https://www.python.org/>
-- Have created an Azure OpenAI Service resource. See this guide for how to [create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?wt.mc_id=studentamb_409460-koreyst).
+- Have created an Azure OpenAI Service resource. See this guide for how to [create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?wt.mc_id=studentamb_409460).
 
 ### Locate API key and endpoint
 
 At this point, you need to tell your `openai` library what API key to use. To find your API key, go to "Keys and Endpoint" section of your Azure OpenAI resource and copy the "Key 1" value.
 
-![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?wt.mc_id=studentamb_409460-koreyst)
+![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?wt.mc_id=studentamb_409460)
 
 Now that you have this information copied, let's instruct the libraries to use it.
 
@@ -173,7 +173,7 @@ Now that we learned how to set up and configure openai, it's time to build your 
    > If you're using Windows type `venv\Scripts\activate` instead of `source venv/bin/activate`.
 
    > [!NOTE]
-   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?wt.mc_id=studentamb_409460-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
+   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?wt.mc_id=studentamb_409460) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
 
 1. Create an _app.py_ file and give it the following code:
 
@@ -652,4 +652,4 @@ When working on the assignment, try to vary the temperature, try set it to 0, 0.
 
 After completing this lesson, check out our [Generative AI Learning collection](https://learn.microsoft.com/en-us/collections/zpy7c8zmq6ky0z?wt.mc_id=studentamb_409460) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 7 where we will look at how to [build chat applications](../07-building-chat-applications/README.md?wt.mc_id=studentamb_409460-koreyst)!
+Head over to Lesson 7 where we will look at how to [build chat applications](../07-building-chat-applications/README.md?wt.mc_id=studentamb_409460)!
