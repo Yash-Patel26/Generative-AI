@@ -398,6 +398,6 @@ See if you can leverage the "cue" technique with the prompt: Complete the senten
 
 ## Great Work! Continue Your Learning
 
-Want to learn more about different Prompt Engineering concepts? Go to the [continued learning page](https://aka.ms/genai-collection?wt.mc_id=studentamb_409460-koreyst) to find other great resources on this topic.
+Want to learn more about different Prompt Engineering concepts? Go to the [continued learning page](https://learn.microsoft.com/en-us/collections/zpy7c8zmq6ky0z?wt.mc_id=studentamb_409460) to find other great resources on this topic.
 
 Head over to Lesson 5 where we will look at [advanced prompting techniques](../05-advanced-prompts/README.md?wt.mc_id=studentamb_409460-koreyst)!
