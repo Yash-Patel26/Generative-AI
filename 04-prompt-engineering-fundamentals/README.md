@@ -1,6 +1,6 @@
 # Prompt Engineering Fundamentals
 
-[![Prompt Engineering Fundamentals](./images/04-lesson-banner.png?wt.mc_id=studentamb_409460-koreyst)](https://aka.ms/gen-ai-lesson4-gh?wt.mc_id=studentamb_409460-koreyst)
+[![Prompt Engineering Fundamentals](./images/04-lesson-banner.png?wt.mc_id=studentamb_409460)](https://aka.ms/gen-ai-lesson4-gh?wt.mc_id=studentamb_409460)
 
 ## Introduction
 This module covers essential concepts and techniques for creating effective prompts in generative AI models. The way your write your prompt to an LLM also matters. A carefully-crafted prompt can achieve a better quality of response. But what exactly do terms like _prompt_ and _prompt engineering_ mean? And how do I improve the prompt _input_ that I send to the LLM? These are the questions we'll try to answer with in this chapter and the next.
@@ -36,7 +36,7 @@ The Jupyter Notebook accompanying this lesson provides a _sandbox_ environment w
 
 1. **An Azure OpenAI API key** - the service endpoint for a deployed LLM.
 2. **A Python Runtime** - in which the Notebook can be executed.
-3. **Local Env Variables** - _complete the [SETUP](./../00-course-setup/SETUP.md?wt.mc_id=studentamb_409460-koreyst) steps now to get ready_.
+3. **Local Env Variables** - _complete the [SETUP](./../00-course-setup/SETUP.md?wt.mc_id=studentamb_409460) steps now to get ready_.
 
 The notebook comes with _starter_ exercises - but you are encouraged to add your own _Markdown_ (description) and _Code_ (prompt requests) sections to try out more examples or ideas - and build your intuition for prompt design.
 
@@ -44,17 +44,17 @@ The notebook comes with _starter_ exercises - but you are encouraged to add your
 
 Want to get the big picture of what this lesson covers before you dive in? Check out this illustrated guide, which gives you a sense of the main topics covered and the key takeaways for you to think about in each one. The lesson roadmap takes you from understanding the core concepts and challenges to addressing them with relevant prompt engineering techniques and best practices. Note that the "Advanced Techniques" section in this guide refers to content covered in the _next_ chapter of this curriculum.
 
-![Illustrated Guide to Prompt Engineering](./images/04-prompt-engineering-sketchnote.png?wt.mc_id=studentamb_409460-koreyst)
+![Illustrated Guide to Prompt Engineering](./images/04-prompt-engineering-sketchnote.png?wt.mc_id=studentamb_409460)
 
 ## Our Startup
 
-Now, let's talk about how _this topic_ relates to our startup mission to [bring AI innovation to education](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?wt.mc_id=studentamb_409460-koreyst). We want to build AI-powered applications of _personalized learning_ - so let's think about how different users of our application might "design" prompts:
+Now, let's talk about how _this topic_ relates to our startup mission to [bring AI innovation to education](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?wt.mc_id=studentamb_409460). We want to build AI-powered applications of _personalized learning_ - so let's think about how different users of our application might "design" prompts:
 
 - **Administrators** might ask the AI to _analyze curriculum data to identify gaps in coverage_. The AI can summarize results or visualize them with code.
 - **Educators** might ask the AI to _generate a lesson plan for a target audience and topic_. The AI can build the personalized plan in a specified format.
 - **Students** might ask the AI to _tutor them in a difficult subject_. The AI can now guide students with lessons, hints & examples tailored to their level.
 
-That's just the tip of the iceberg. Check out [Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?wt.mc_id=studentamb_409460-koreyst) - an open-source prompts library curated by education experts - to get a broader sense of the possibilities! _Try running some of those prompts in the sandbox or using the OpenAI Playground to see what happens!_
+That's just the tip of the iceberg. Check out [Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?wt.mc_id=studentamb_409460) - an open-source prompts library curated by education experts - to get a broader sense of the possibilities! _Try running some of those prompts in the sandbox or using the OpenAI Playground to see what happens!_
 
 <!--
 LESSON TEMPLATE:
@@ -83,23 +83,23 @@ This is necessarily a trial-and-error process that requires user intuition and e
 
 An LLM sees prompts as a _sequence of tokens_ where different models (or versions of a model) can tokenize the same prompt in different ways. Since LLMs are trained on tokens (and not on raw text), the way prompts get tokenized has a direct impact on the quality of the generated response.
 
-To get an intuition for how tokenization works, try tools like the [OpenAI Tokenizer](https://platform.openai.com/tokenizer?wt.mc_id=studentamb_409460-koreyst) shown below. Copy in your prompt - and see how that gets converted into tokens, paying attention to how whitespace characters and punctuation marks are handled. Note that this example shows an older LLM (GPT-3) - so trying this with a newer model may produce a different result.
+To get an intuition for how tokenization works, try tools like the [OpenAI Tokenizer](https://platform.openai.com/tokenizer?wt.mc_id=studentamb_409460) shown below. Copy in your prompt - and see how that gets converted into tokens, paying attention to how whitespace characters and punctuation marks are handled. Note that this example shows an older LLM (GPT-3) - so trying this with a newer model may produce a different result.
 
-![Tokenization](./images/04-tokenizer-example.png?wt.mc_id=studentamb_409460-koreyst)
+![Tokenization](./images/04-tokenizer-example.png?wt.mc_id=studentamb_409460)
 
 ### Concept: Foundation Models
 
-Once a prompt is tokenized, the primary function of the ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?wt.mc_id=studentamb_409460-koreyst) (or Foundation model) is to predict the token in that sequence. Since LLMs are trained on massive text datasets, they have a good sense of the statistical relationships between tokens and can make that prediction with some confidence. Note that they don't understand the _meaning_ of the words in the prompt or token; they just see a pattern they can "complete" with their next prediction. They can continue predicting the sequence till terminated by user intervention or some pre-established condition.
+Once a prompt is tokenized, the primary function of the ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?wt.mc_id=studentamb_409460) (or Foundation model) is to predict the token in that sequence. Since LLMs are trained on massive text datasets, they have a good sense of the statistical relationships between tokens and can make that prediction with some confidence. Note that they don't understand the _meaning_ of the words in the prompt or token; they just see a pattern they can "complete" with their next prediction. They can continue predicting the sequence till terminated by user intervention or some pre-established condition.
 
-Want to see how prompt-based completion works? Enter the above prompt into the Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?wt.mc_id=studentamb_409460-koreyst) with the default settings. The system is configured to treat prompts as requests for information - so you should see a completion that satisfies this context.
+Want to see how prompt-based completion works? Enter the above prompt into the Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?wt.mc_id=studentamb_409460) with the default settings. The system is configured to treat prompts as requests for information - so you should see a completion that satisfies this context.
 
 But what if the user wanted to see something specific that met some criteria or task objective? This is where _instruction-tuned_ LLMs come into the picture.
 
-![Base LLM Chat Completion](./images/04-playground-chat-base.png?wt.mc_id=studentamb_409460-koreyst)
+![Base LLM Chat Completion](./images/04-playground-chat-base.png?wt.mc_id=studentamb_409460)
 
 ### Concept: Instruction Tuned LLMs
 
-An [Instruction Tuned LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?wt.mc_id=studentamb_409460-koreyst) starts with the foundation model and fine-tunes it with examples or input/output pairs (e.g., multi-turn "messages") that can contain clear instructions - and the response from the AI attempt to follow that instruction.
+An [Instruction Tuned LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?wt.mc_id=studentamb_409460) starts with the foundation model and fine-tunes it with examples or input/output pairs (e.g., multi-turn "messages") that can contain clear instructions - and the response from the AI attempt to follow that instruction.
 
 This uses techniques like Reinforcement Learning with Human Feedback (RLHF) that can train the model to _follow instructions_ and _learn from feedback_ so that it produces responses that are better-suited to practical applications and more relevant to user objectives.
 
@@ -109,7 +109,7 @@ Let's try it out - revisit the prompt above, but now change the _system message_
 
 See how the result is now tuned to reflect the desired goal and format? An educator can now directly use this response in their slides for that class.
 
-![Instruction Tuned LLM Chat Completion](./images/04-playground-chat-instructions.png?wt.mc_id=studentamb_409460-koreyst)
+![Instruction Tuned LLM Chat Completion](./images/04-playground-chat-instructions.png?wt.mc_id=studentamb_409460)
 
 ## Why do we need Prompt Engineering?
 
@@ -128,7 +128,7 @@ Let's see this in action in the OpenAI or Azure OpenAI Playground:
 
 ### Fabrications Example
 
-In this course, we use the term **"fabrication"** to reference the phenomenon where LLMs sometimes generate factually incorrect information due to limitations in their training or other constraints. You may also have heard this referred to as _"hallucinations"_ in popular articles or research papers. However, we strongly recommend using _"fabrication"_ as the term so we don't accidentally anthropomorphize the behavior by attributing a human-like trait to a machine-driven outcome. This also reinforces [Responsible AI guidelines](https://www.microsoft.com/ai/responsible-ai?wt.mc_id=studentamb_409460-koreyst) from a terminology perspective, removing terms that may also be considered offensive or non-inclusive in some contexts.
+In this course, we use the term **"fabrication"** to reference the phenomenon where LLMs sometimes generate factually incorrect information due to limitations in their training or other constraints. You may also have heard this referred to as _"hallucinations"_ in popular articles or research papers. However, we strongly recommend using _"fabrication"_ as the term so we don't accidentally anthropomorphize the behavior by attributing a human-like trait to a machine-driven outcome. This also reinforces [Responsible AI guidelines](https://www.microsoft.com/ai/responsible-ai?wt.mc_id=studentamb_409460) from a terminology perspective, removing terms that may also be considered offensive or non-inclusive in some contexts.
 
 Want to get a sense of how fabrications work? Think of a prompt that instructs the AI to generate content for a non-existent topic (to ensure it is not found in the training dataset). For example - I tried this prompt:
 
@@ -140,15 +140,15 @@ So what happens when we run this prompt with different LLM providers?
 
 > **Response 1**: OpenAI Playground (GPT-35)
 
-![Response 1](./images/04-fabrication-oai.png?wt.mc_id=studentamb_409460-koreyst)
+![Response 1](./images/04-fabrication-oai.png?wt.mc_id=studentamb_409460)
 
 > **Response 2**: Azure OpenAI Playground (GPT-35)
 
-![Response 2](./images/04-fabrication-aoai.png?wt.mc_id=studentamb_409460-koreyst)
+![Response 2](./images/04-fabrication-aoai.png?wt.mc_id=studentamb_409460)
 
 > **Response 3**: : Hugging Face Chat Playground (LLama-2)
 
-![Response 3](./images/04-fabrication-huggingchat.png?wt.mc_id=studentamb_409460-koreyst)
+![Response 3](./images/04-fabrication-huggingchat.png?wt.mc_id=studentamb_409460)
 
 As expected, each model (or model version) produces slightly different responses thanks to stochastic behavior and model capability variations. For instance, one model targets an 8th grade audience while the other assumes a high-school student. But all three models did generate responses that could convince an uninformed user that the event was real
 
@@ -156,20 +156,20 @@ Prompt engineering techniques like _metaprompting_ and _temperature configuratio
 
 ## Case Study: GitHub Copilot
 
-Let's wrap this section by getting a sense of how prompt engineering is used in real-world solutions by looking at one Case Study: [GitHub Copilot](https://github.com/features/copilot?wt.mc_id=studentamb_409460-koreyst).
+Let's wrap this section by getting a sense of how prompt engineering is used in real-world solutions by looking at one Case Study: [GitHub Copilot](https://github.com/features/copilot?wt.mc_id=studentamb_409460).
 
-GitHub Copilot is your "AI Pair Programmer" - it converts text prompts into code completions and is integrated into your development environment (e.g., Visual Studio Code) for a seamless user experience. As documented in the series of blogs below, the earliest version was based on the OpenAI Codex model - with engineers quickly realizing the need to fine-tune the model and develop better prompt engineering techniques, to improve code quality. In July, they [debuted an improved AI model that goes beyond Codex](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?wt.mc_id=studentamb_409460-koreyst) for even faster suggestions.
+GitHub Copilot is your "AI Pair Programmer" - it converts text prompts into code completions and is integrated into your development environment (e.g., Visual Studio Code) for a seamless user experience. As documented in the series of blogs below, the earliest version was based on the OpenAI Codex model - with engineers quickly realizing the need to fine-tune the model and develop better prompt engineering techniques, to improve code quality. In July, they [debuted an improved AI model that goes beyond Codex](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?wt.mc_id=studentamb_409460) for even faster suggestions.
 
 Read the posts in order, to follow their learning journey.
 
-- **May 2023** | [GitHub Copilot is Getting Better at Understanding Your Code](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?wt.mc_id=studentamb_409460-koreyst)
-- **May 2023** | [Inside GitHub: Working with the LLMs behind GitHub Copilot](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?wt.mc_id=studentamb_409460-koreyst).
-- **Jun 2023** | [How to write better prompts for GitHub Copilot](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?wt.mc_id=studentamb_409460-koreyst).
-- **Jul 2023** | [.. GitHub Copilot goes beyond Codex with improved AI model](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?wt.mc_id=studentamb_409460-koreyst)
-- **Jul 2023** | [A Developer's Guide to Prompt Engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?wt.mc_id=studentamb_409460-koreyst)
-- **Sep 2023** | [How to build an enterprise LLM app: Lessons from GitHub Copilot](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?wt.mc_id=studentamb_409460-koreyst)
+- **May 2023** | [GitHub Copilot is Getting Better at Understanding Your Code](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?wt.mc_id=studentamb_409460)
+- **May 2023** | [Inside GitHub: Working with the LLMs behind GitHub Copilot](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?wt.mc_id=studentamb_409460).
+- **Jun 2023** | [How to write better prompts for GitHub Copilot](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?wt.mc_id=studentamb_409460).
+- **Jul 2023** | [.. GitHub Copilot goes beyond Codex with improved AI model](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?wt.mc_id=studentamb_409460)
+- **Jul 2023** | [A Developer's Guide to Prompt Engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?wt.mc_id=studentamb_409460)
+- **Sep 2023** | [How to build an enterprise LLM app: Lessons from GitHub Copilot](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?wt.mc_id=studentamb_409460)
 
-You can also browse their [Engineering blog](https://github.blog/category/engineering/?wt.mc_id=studentamb_409460-koreyst) for more posts like [this one](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?wt.mc_id=studentamb_409460-koreyst) that shows how these models and techniques are _applied_ for driving real-world applications.
+You can also browse their [Engineering blog](https://github.blog/category/engineering/?wt.mc_id=studentamb_409460) for more posts like [this one](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?wt.mc_id=studentamb_409460) that shows how these models and techniques are _applied_ for driving real-world applications.
 
 ---
 
@@ -189,7 +189,7 @@ We've seen why prompt engineering is important - now let's understand how prompt
 
 ### Basic Prompt
 
-Let's start with the basic prompt: a text input sent to the model with no other context. Here's an example - when we send the first few words of the US national anthem to the OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?wt.mc_id=studentamb_409460-koreyst) it instantly _completes_ the response with the next few lines, illustrating the basic prediction behavior.
+Let's start with the basic prompt: a text input sent to the model with no other context. Here's an example - when we send the first few words of the US national anthem to the OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?wt.mc_id=studentamb_409460) it instantly _completes_ the response with the next few lines, illustrating the basic prediction behavior.
 
 | Prompt (Input)     | Completion (Output)                                                                                                                        |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -197,7 +197,7 @@ Let's start with the basic prompt: a text input sent to the model with no other 
 
 ### Complex Prompt
 
-Now let's add context and instructions to that basic prompt. The [Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?wt.mc_id=studentamb_409460-koreyst) lets us construct a complex prompt as a collection of _messages_ with:
+Now let's add context and instructions to that basic prompt. The [Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?wt.mc_id=studentamb_409460) lets us construct a complex prompt as a collection of _messages_ with:
 
 - Input/output pairs reflecting _user_ input and _assistant_ response.
 - System message setting the context for assistant behavior or personality.
@@ -279,11 +279,11 @@ Another technique for using primary content is to provide _cues_ rather than exa
 
 ### Prompt Templates
 
-A prompt template is a _pre-defined recipe for a prompt_ that can be stored and reused as needed, to drive more consistent user experiences at scale. In its simplest form, it is simply a collection of prompt examples like [this one from OpenAI](https://platform.openai.com/examples?wt.mc_id=studentamb_409460-koreyst) that provides both the interactive prompt components (user and system messages) and the API-driven request format - to support reuse.
+A prompt template is a _pre-defined recipe for a prompt_ that can be stored and reused as needed, to drive more consistent user experiences at scale. In its simplest form, it is simply a collection of prompt examples like [this one from OpenAI](https://platform.openai.com/examples?wt.mc_id=studentamb_409460) that provides both the interactive prompt components (user and system messages) and the API-driven request format - to support reuse.
 
-In it's more complex form like [this example from LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?wt.mc_id=studentamb_409460-koreyst) it contains _placeholders_ that can be replaced with data from a variety of sources (user input, system context, external data sources etc.) to generate a prompt dynamically. This allows us to create a library of reusable prompts that can be used to drive consistent user experiences **programmatically** at scale.
+In it's more complex form like [this example from LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?wt.mc_id=studentamb_409460) it contains _placeholders_ that can be replaced with data from a variety of sources (user input, system context, external data sources etc.) to generate a prompt dynamically. This allows us to create a library of reusable prompts that can be used to drive consistent user experiences **programmatically** at scale.
 
-Finally, the real value of templates lies in the ability to create and publish _prompt libraries_ for vertical application domains - where the prompt template is now _optimized_ to reflect application-specific context or examples that make the responses more relevant and accurate for the targeted user audience. The [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?wt.mc_id=studentamb_409460-koreyst) repository is a great example of this approach, curating a library of prompts for the education domain with emphasis on key objectives like lesson planning, curriculum design, student tutoring etc.
+Finally, the real value of templates lies in the ability to create and publish _prompt libraries_ for vertical application domains - where the prompt template is now _optimized_ to reflect application-specific context or examples that make the responses more relevant and accurate for the targeted user audience. The [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?wt.mc_id=studentamb_409460) repository is a great example of this approach, curating a library of prompts for the education domain with emphasis on key objectives like lesson planning, curriculum design, student tutoring etc.
 
 ## Supporting Content
 
@@ -326,7 +326,7 @@ Prompt Engineering is a trial-and-error process so keep three broad guiding fact
 
 ## Best Practices
 
-Now let's look at common best practices that are recommended by [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?wt.mc_id=studentamb_409460-koreyst) and [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?wt.mc_id=studentamb_409460-koreyst) practitioners.
+Now let's look at common best practices that are recommended by [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?wt.mc_id=studentamb_409460) and [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?wt.mc_id=studentamb_409460) practitioners.
 
 | What                              | Why                                                                                                                                                                                                                                               |
 | :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -400,4 +400,4 @@ See if you can leverage the "cue" technique with the prompt: Complete the senten
 
 Want to learn more about different Prompt Engineering concepts? Go to the [continued learning page](https://learn.microsoft.com/en-us/collections/zpy7c8zmq6ky0z?wt.mc_id=studentamb_409460) to find other great resources on this topic.
 
-Head over to Lesson 5 where we will look at [advanced prompting techniques](../05-advanced-prompts/README.md?wt.mc_id=studentamb_409460-koreyst)!
+Head over to Lesson 5 where we will look at [advanced prompting techniques](../05-advanced-prompts/README.md?wt.mc_id=studentamb_409460)!
